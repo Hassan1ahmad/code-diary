@@ -1,0 +1,51 @@
+/* Given CSS for background-image */
+.background-image {
+    background-image: url('../assests/home-background.jpg');
+    background-size: cover;
+    background-position: top;
+    width: 1360px; /* I assume there was a typo in your provided value, adjusting it */
+    height: 517px;
+    display: flex;       /* Use flex to easily center the child div */
+    justify-content: center;  /* Center the child horizontally */
+    align-items: center;      /* Center the child vertically */
+}
+
+/* CSS to center the content */
+.center-home {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for "Code diary" */
+.diary {
+    position: relative;
+    top: -71px;
+    font-size: 177px;     /* Large font size */
+    font-weight: bold;   /* Bold text */
+    color: #D8B4F2;     /* White text for better visibility on most backgrounds */
+   
+}
+
+/* Styling for "Learn about react js" */
+.learn {
+    position: relative;
+    top: -71px;
+    font-size: 32px;      /* Moderately large font size */
+    color: #D8B4F2;      /* White text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  /* Text shadow for better legibility */
+    /* margin-top: 20px; */
+}
+ @media (max-width:768px) {
+    .background-image{
+        width: 360px;
+        height: 644px;
+    }
+    .diary{
+        font-size: 60px;
+        top: 0px;
+    }
+    .learn{
+        font-size: 13px;
+        top: 0px;
+    }
+ }
