@@ -1,10 +1,4 @@
-/*
-Name: Duotone Sea
-Author: by Simurai, adapted from DuoTone themes by Simurai for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
 
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-sea-dark.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
 
 code[class*="language-"],
 pre[class*="language-"] {
@@ -151,9 +145,7 @@ pre > code.highlight {
 	outline-offset: .4em;
 }
 
-/* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
- */
+
 .line-numbers.line-numbers .line-numbers-rows {
 	border-right-color: #1f2932;
 }
@@ -162,9 +154,7 @@ pre > code.highlight {
 	color: #2c3847;
 }
 
-/* overrides color-values for the Line Highlight plugin
-* http://prismjs.com/plugins/line-highlight/
-*/
+
 .line-highlight.line-highlight {
 	background: rgba(10, 163, 112, 0.2);
 	background: -webkit-linear-gradient(left, rgba(10, 163, 112, 0.2) 70%, rgba(10, 163, 112, 0));
