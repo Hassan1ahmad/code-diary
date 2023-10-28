@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/code-diary/static/css/main.b1c64bd0.css",
+    "main.js": "/code-diary/static/js/main.0808d286.js",
+    "static/js/787.dd700030.chunk.js": "/code-diary/static/js/787.dd700030.chunk.js",
+    "static/media/background gradiant.png": "/code-diary/static/media/background gradiant.018736a55e29a11f11fe.png",
+    "static/media/home-background.jpg": "/code-diary/static/media/home-background.964aa7fe8c2559bdd2c3.jpg",
+    "static/media/cssglow.jpg": "/code-diary/static/media/cssglow.e9d79df47c1de10054e7.jpg",
+    "static/media/fency border.jpg": "/code-diary/static/media/fency border.629d210ac3813a94e5e8.jpg",
+    "index.html": "/code-diary/index.html",
+    "main.b1c64bd0.css.map": "/code-diary/static/css/main.b1c64bd0.css.map",
+    "main.0808d286.js.map": "/code-diary/static/js/main.0808d286.js.map",
+    "787.dd700030.chunk.js.map": "/code-diary/static/js/787.dd700030.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1c64bd0.css",
+    "static/js/main.0808d286.js"
+  ]
+}
