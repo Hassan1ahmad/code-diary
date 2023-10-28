@@ -11,13 +11,13 @@ export default function Footer() {
                     <nav>
                         <ul>
                             <li> <a href="https://github.com/Hassan1ahmad" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-square-github"></i>
+                            <i className="fa-brands fa-square-github"></i>
                     </a></li>
                             <li> <a href="https://www.instagram.com/hassanopahmadxd/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-instagram"></i>
+                            <i className="fa-brands fa-instagram"></i>
                     </a></li>
                             <li>  <a href="https://linkedin.com/in/hassan-ahmad-" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <i className="fa-brands fa-linkedin"></i>
                     </a></li>
                             <li><a href="mailto:hassan1ahmad999@gmail.com">
                         <i className="fa fa-envelope" aria-hidden="true"></i>

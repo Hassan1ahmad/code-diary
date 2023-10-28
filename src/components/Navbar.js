@@ -31,7 +31,7 @@ const shownavclicked=()=>{
       {/* ============================section 2========================= */}
      <div className="section2">
       <div className="left">
-        <Link to='/' ><i class="fa-solid fa-house"></i></Link>
+        <Link to='/' ><i className="fa-solid fa-house"></i></Link>
       </div>
        {/* Hamburger Icon */}
        <div className="hamburger" >
@@ -53,14 +53,14 @@ const shownavclicked=()=>{
       {/* ====================right search box==================== */}
       <div className='search-box'>
       <div className={`icon ${displaySearch === null? '' : 'display-none'}`}>
-        <i onClick={serachiconclicked} class="fa-solid fa-magnifying-glass"></i>
+        <i onClick={serachiconclicked} className="fa-solid fa-magnifying-glass"></i>
         </div>
       <div className={`right ${displaySearch === null? 'display-none' : ''}`}>
         <div className="serach-button">
           <input type="search" name="" id="" />
         </div>
         <div className="icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
         </div>
         </div>
       </div>

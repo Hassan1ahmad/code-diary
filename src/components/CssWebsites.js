@@ -20,15 +20,15 @@ function CssWebsites() {
          <h2 className='text-center fw-bolder'>CSS Websites</h2>
           <div id="item-1">
             <h4>CSSBud's Glow Generator: Making Things Shine Easily</h4>
-            <p className='lh-base'>  <strong><a target='blank' href="https://cssbud.com/css-generator/css-glow-generator/" class="text-reset" rel="noopener noreferrer"> CSSBud's Glow Generator</a></strong> is a user-friendly tool to create glow, where you just set a few things: <br /> how blurry you want the glow,<br /> how wide the glow should spread, <br /> and how see-through or solid it should appear. <br />  So, if you want to draw attention to buttons, make text stand out, or just add some fun lighting effects to images, this tool does the trick. All without needing to dive deep into complex CSS. Simply adjust the blur, glow range, and opacity, and you're good to glow!
+            <p className='lh-base'>  <strong><a target='blank' href="https://cssbud.com/css-generator/css-glow-generator/" className="text-reset" rel="noopener noreferrer"> CSSBud's Glow Generator</a></strong> is a user-friendly tool to create glow, where you just set a few things: <br /> how blurry you want the glow,<br /> how wide the glow should spread, <br /> and how see-through or solid it should appear. <br />  So, if you want to draw attention to buttons, make text stand out, or just add some fun lighting effects to images, this tool does the trick. All without needing to dive deep into complex CSS. Simply adjust the blur, glow range, and opacity, and you're good to glow!
             </p>
             <Code language={'javascript'} code={`https://cssbud.com/css-generator/css-glow-generator/`} />
-            <img src={require('../assests/cssglow.jpg')} class="img-fluid" alt="..."></img>
+            <img src={require('../assests/cssglow.jpg')} className="img-fluid" alt="..."></img>
           </div>
           <div id="item-2">
             <h4>Fency Border</h4>
             <p className='lh-base'>
-            Hosted on <b> <a target='blank' href="https://9elements.github.io/fancy-border-radius/" class="text-reset" rel="noopener noreferrer"> 9elements.github.io</a> </b>, the <b>Fancy Border Radius</b> tool provides web designers and developers with a visually intuitive platform to craft complex and unique border radius shapes. Unlike the traditional border-radius properties in CSS which offer simple rounded corners, this tool takes it to the next level by allowing for intricate curves and designs.<br/><br/>
+            Hosted on <b> <a target='blank' href="https://9elements.github.io/fancy-border-radius/" className="text-reset" rel="noopener noreferrer"> 9elements.github.io</a> </b>, the <b>Fancy Border Radius</b> tool provides web designers and developers with a visually intuitive platform to craft complex and unique border radius shapes. Unlike the traditional border-radius properties in CSS which offer simple rounded corners, this tool takes it to the next level by allowing for intricate curves and designs.<br/><br/>
             To get started, users can simply adjust the visual handles on a square element. As adjustments are made, the tool automatically generates the corresponding CSS code. This makes creating <b>intricate designs</b> and <b>organic shapes</b> not just possible, but remarkably easy.
           </p>
           <Code language={'javascript'} code={`https://9elements.github.io/fancy-border-radius/`} />

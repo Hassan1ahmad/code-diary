@@ -21,11 +21,13 @@ function Reactjs() {
             <p>
            <b>Open VS Code:</b>   Start Visual Studio Code.<br/>
             <b>Open Terminal:</b>  Use the shortcut Ctrl + ~ or navigate to View  Terminal to open the integrated terminal in VS Code.
+           </p>
            <Code language={'javascript'} code={`npx create-react-app my-app`} />
+           <p>
            In place of my-app , place your app name.<br/>
            <b>Start the Development Server:</b> Run the command:
-           <Code language={'javascript'} code={`npm start`} />
             </p>
+           <Code language={'javascript'} code={`npm start`} />
           </div>
           <div id="item-2">
             <h4>Deploy React app on Git Pages</h4>
@@ -42,12 +44,13 @@ function Reactjs() {
           <Code language={'javascript'} code={`"homepage": "http://[username].github.io/[repo-name]"`} />
           <p>
             <b>3. Add Deploy Scripts:</b> Staying within <code>package.json</code>, locate the <code>"scripts"</code> section. Here, incorporate these lines:
+            </p>
             <pre>
             "predeploy": "npm run build",
             "deploy": "gh-pages -d build"
             </pre>
             This configuration ensures that GitHub will first build your React app prior to deploying it.
-          </p>
+          
           <Code language='javascript' code={`"predeploy": "npm run build",\n"deploy": "gh-pages -d build"`} />
           <p>
             <b>4. Deploy:</b> With everything set up, it's time to deploy. Just run <code>npm run deploy</code>. This command will both build your React app and deploy it to GitHub Pages.

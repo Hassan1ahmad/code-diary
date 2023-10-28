@@ -174,7 +174,7 @@ pre > code.highlight {
 
 .block-code {
 	position: relative;
-	max-width: 500px;
+	width: 500px;
 	margin: 20px auto;
 	max-height: 300px;
 	overflow: auto;
@@ -184,6 +184,7 @@ pre > code.highlight {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 	  }
   
  /* This is the entire scrollbar */
