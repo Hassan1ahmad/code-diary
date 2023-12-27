@@ -13,6 +13,7 @@ function CssWebsites() {
           <a className="nav-link" href="#item-1">Glow Generator</a>
           <a className="nav-link" href="#item-2">Fency Border</a>
           <a className="nav-link" href="#item-3">Gradient Background</a>
+          <a className="nav-link" href="#item-4">Color palettes</a>
         </nav>
       </div>
       <div className="col-8 content">
@@ -45,9 +46,14 @@ function CssWebsites() {
             </p>
             <Code language={'javascript'} code={`https://csshero.org/mesher/`} />
             <img  src={require('../assests/background gradiant.png')} className="img-fluid " alt="..."></img>
-
-
-
+          </div>
+          <div id="item-4">
+            <h4>Color palettes</h4>
+            <p>
+              <b>"Colorful Creativity: Simplifying Web Design with<strong><a target='blank' href="https://coolors.co/palettes/trending" className="text-reset" rel="noopener noreferrer"> Coolors.co</a></strong> "</b><br/>
+              Choosing the right color palette is a critical step in web design, and Coolors.co makes this process both fun and efficient. The platform's "Trending" section offers a curated collection of color palettes that align with current design trends.
+            </p>
+            <img  src={require('../assests/palettes.jpg')} className="img-fluid rounded mx-auto d-block" alt="..." ></img>
 
           </div>
         </div>

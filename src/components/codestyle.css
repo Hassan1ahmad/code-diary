@@ -241,10 +241,12 @@ pre > code.highlight {
 	cursor: pointer;
 	transition: background-color 0.3s;
 	z-index: 10;  /* Ensures the button is always above the code */
+	opacity: 0.4;
   }
   
   button:hover {
 	background-color: #1a202c;
+	opacity: 1;
   }
   .block-code{
 	border-radius: 10px;
