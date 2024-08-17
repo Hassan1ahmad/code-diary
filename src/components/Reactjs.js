@@ -17,6 +17,7 @@ function Reactjs() {
               <a className="nav-link ms-3 my-1" href="#item-4-1">Create Slice</a>
               <a className="nav-link ms-3 my-1" href="#item-4-2">Store</a>
             </nav>
+            <a className="nav-link" href="#item-5">React Router 6.0</a>
         </nav>
       </div>
       <div className="col-8 content">
@@ -205,8 +206,43 @@ function Reactjs() {
 
 
           </div>
-          <div id="item-3">
-            <h4>Item 3</h4>
+          <div id="item-5">
+  <h4>Setting Up React Router DOM</h4>
+  <p>
+    <b>Open Terminal:</b> Use the shortcut Ctrl + ~ or navigate to View → Terminal to open the integrated terminal in VS Code.<br/>
+    <b>Install React Router DOM:</b> Run the command:
+  </p>
+  <Code language={'javascript'} code={`npm install react-router-dom@6`} />
+
+  <p>
+    <b>Set Up Routing in index.js:</b> Use the <code>createBrowserRouter</code> and <code>RouterProvider</code> for routing. Example:
+  </p>
+  <Code language={'javascript'} code={`import * as React from "react";\nimport * as ReactDOM from "react-dom/client";\nimport { createBrowserRouter, RouterProvider } from "react-router-dom";\nimport "./index.css";\n\nconst router = createBrowserRouter([\n  {\n    path: "/",\n    element: <div>Hello world!</div>,\n  },\n]);\n\nReactDOM.createRoot(document.getElementById("root")).render(\n  <React.StrictMode>\n    <RouterProvider router={router} />\n  </React.StrictMode>\n);`} />
+
+  <p>
+    <b>Create Component Files:</b> Define the components you want to render at different routes, and update the router configuration accordingly. Example for a <code>Home.js</code> component:
+  </p>
+  <Code language={'javascript'} code={`function Home() {\n  return <h1>Home Page</h1>;\n}\n\nexport default Home;`} />
+
+  <p>
+    Similarly, create an <code>About.js</code> component:
+  </p>
+  <Code language={'javascript'} code={`function About() {\n  return <h1>About Page</h1>;\n}\n\nexport default About;`} />
+
+  <p>
+    <b>Update the Router Configuration:</b> Update the <code>router</code> configuration in your <code>index.js</code> file to include these components:
+  </p>
+  <Code language={'javascript'} code={`const router = createBrowserRouter([\n  {\n    path: "/",\n    element: <Home />,\n  },\n  {\n    path: "/about",\n    element: <About />,\n  },\n]);`} />
+
+  <p>
+    <b>Example with Nested Routes:</b> If you have a layout component that includes a navbar and other shared UI elements, you can structure your router like this:
+  </p>
+  <Code language={'javascript'} code={`function App() {\n  const router = createBrowserRouter([\n    {\n      path: "/",\n      element: <Layout />,  // Wrap your layout including the navbar here\n      children: [\n        {\n          path: "/",\n          element: <Home />,\n        },\n        // You can add more routes here if needed\n      ],\n    },\n  ]);\n\n  return (\n    <RouterProvider router={router} />\n  );\n}`} />
+</div>
+
+
+          <div id="item-5">
+            <h4>Item 5</h4>
             <p></p>
           </div>
         </div>

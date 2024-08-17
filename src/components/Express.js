@@ -19,10 +19,13 @@ function Express() {
           <a className="nav-link" href="#item-6">Up.. Data to MongoDB</a>
           <a className="nav-link" href="#item-7">Express Validator</a>
           <nav className="nav nav-pills flex-column">
-              <a className="nav-link ms-3 my-1" href="#item-7-1">UserName Valid..</a>
-              <a className="nav-link ms-3 my-1" href="#item-7-2">Email Validation</a>
-              <a className="nav-link ms-3 my-1" href="#item-7-3">Password Validation</a>
+              <a className="nav-link ms-3 my-1" href="#item-7-1">Validation Errors</a>
+              <a className="nav-link ms-3 my-1" href="#item-7-2">UserName Valid..</a>
+              <a className="nav-link ms-3 my-1" href="#item-7-3">Email Validation</a>
+              <a className="nav-link ms-3 my-1" href="#item-7-4">Password Validation</a>
             </nav>
+         <a className="nav-link" href="#item-8">Middleware</a>
+
 
         </nav>
       </div>
@@ -269,6 +272,69 @@ function Express() {
 
           </div>
           <div id="item-7-1">
+            <h4>Handling Validation Errors</h4>
+        <p>
+          When using Express Validator for form validation, handling validation errors is crucial for providing meaningful feedback to clients. Let's explore how to check for validation errors and send a helpful response to clients when validation fails.
+        </p>
+
+        <p>
+          <strong>Checking for Validation Errors</strong>
+        </p>
+
+        <p>
+          After performing validation using Express Validator, you can check for errors using the <code>validationResult</code> function:
+        </p>
+
+        <Code language='javascript' code={`const errors = validationResult(req);`} />
+
+        <p>
+          <strong>Sending a Response on Validation Failure</strong>
+        </p>
+
+        <p>
+          If validation errors are present, you can respond with a 400 Bad Request status and include an array of error messages in the response body:
+        </p>
+
+        <Code language='javascript' code={`if (!errors.isEmpty()) {\n  return res.status(400).json({\n    errors: errors.array().map(error => error.msg)\n  });\n}`} />
+
+
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+
+        <ul>
+          <li>
+            <code>validationResult(req)</code>: Collects validation errors from the request object.
+          </li>
+          <li>
+            The <code>isEmpty()</code> method checks if there are any validation errors.
+          </li>
+          <li>
+            If errors are present, the response includes a 400 Bad Request status and an array of error messages extracted from the validation result.
+          </li>
+        </ul>
+
+        <p>
+          <strong>Customizing Error Messages</strong>
+        </p>
+
+        <p>
+          You can customize error messages during validation by using the <code>withMessage</code> method. The provided error messages will be included in the response when validation fails.
+        </p>
+
+        <Code language='javascript' code={`body('username')\n  .isLength({ min: 5 }).withMessage('Username must be at least 5 characters long')\n  .isAlpha().withMessage('Username can only contain letters'),`} />
+
+
+        <p>
+          <strong>Conclusion</strong>
+        </p>
+
+        <p>
+          Properly handling validation errors in your Express.js application ensures clear communication with clients, helping them understand and correct input issues. Implementing meaningful error messages enhances the overall user experience and aids in debugging during development.
+        </p>
+
+          </div>
+          <div id="item-7-2">
           <h4>UserName Validation</h4>
         <p>
           When validating UserName Validation in your Express application using Express Validator, you can apply specific rules to ensure the correctness and security of the provided UserName. Below are the validation rules for an Username field:
@@ -295,12 +361,12 @@ function Express() {
         </p>
 
           </div>
-          <div id="item-7-2">
+          <div id="item-7-3">
             <h4>Email Validation</h4>
             <p>
               Continuing with email validation in your Express application, you can include additional checks such as verifying if the email is already in use. Add the following validation rules for the 'email' field within your route handler:
             </p>
-            <Code language='javascript' code={`body('email').isEmail().withMessage('Not a valid e-mail address')\n.custom(async value => {\n    const repeatedemail = await Buyer.findOne({email:value});\n    if (repeatedemail) { throw new Error('E-mail already in use'); }\n}),`} />
+            <Code language='javascript' code={`body('email').isEmail().withMessage('Not a valid e-mail address')\n.custom(async value => {\n    const repeatedemail = await user.findOne({email:value});\n    if (repeatedemail) { throw new Error('E-mail already in use'); }\n}),`} />
             <p>
               <strong>Explanation:</strong>
             </p>
@@ -322,12 +388,12 @@ function Express() {
             </p>
 
           </div>
-          <div id="item-7-3">
+          <div id="item-7-4">
             <h4>Password Validation</h4>
               <p>
                 Including validation for the password and password confirmation fields in your Express application is crucial for ensuring secure user registration. Add the following validation rules for the 'password' and 'passwordConfirmation' fields within your route handler:
               </p>
-              <Code language='javascript' code={`// ========Validation for password========\nbody('password').isLength({min : 5})\n.exists().withMessage('Can't be empty')\n\n// ========Validation for passwordconfirmation========\nbody('passwordConfirmation').custom((value, { req }) => {\n    if( value !== req.body.password){\n        throw new Error('Password confirmation does not match password');\n    }\n    return true;\n}),`} />
+              <Code language='javascript' code={`// ========Validation for password========\nbody('password').isLength({min : 5})\n.notEmpty().withMessage('Username is required')\n\n// ========Validation for passwordconfirmation========\nbody('passwordConfirmation').custom((value, { req }) => {\n    if( value !== req.body.password){\n        throw new Error('Password confirmation does not match password');\n    }\n    return true;\n}),`} />
 
               <p>
                 <strong>Explanation:</strong>
@@ -351,6 +417,70 @@ function Express() {
               <p>
                 These validations contribute to the overall security and integrity of user registration in your application.
               </p>
+
+          </div>
+          <div id="item-8">
+            <h4>Creating Custom Middleware in Express.js</h4>
+          <p>
+            Middleware functions in Express.js allow you to execute code during the request-response cycle. Creating custom middleware enhances the flexibility and modularity of your application. Let's explore how to design and implement custom middleware to handle various tasks in your Express.js application.
+          </p>
+
+          <p>
+            <strong>Understanding Middleware in Express</strong>
+          </p>
+
+          <p>
+            Middleware functions have access to the request object (<code>req</code>), the response object (<code>res</code>), and the next middleware function in the application's request-response cycle (<code>next</code>). They can perform tasks, modify request and response objects, or terminate the request-response cycle.
+          </p>
+
+          <p>
+            <strong>Creating a Basic Middleware</strong>
+          </p>
+
+          <p>
+            Start by creating a basic middleware function. The following example logs a message to the console for every incoming request:
+          </p>
+
+          <Code language='javascript' code={`const logRequest = (req, res, next) => {\n    console.log('Incoming Request:', req.method, req.url);\n    next();\n};\n\napp.use(logRequest);`} />
+
+
+          <p>
+            <strong>Creating Parameterized Middleware</strong>
+          </p>
+
+          <p>
+            Middleware can take parameters for dynamic behavior. Here's an example of a parameterized middleware that logs a custom message:
+          </p>
+
+          <Code language='javascript' code={`const customLogger = (message) => (req, res, next) => {\n    console.log(message);\n    next();\n};\n\napp.use(customLogger('Custom Middleware Logging'));`} />
+
+
+          <p>
+            <strong>Using Middleware in Specific Routes</strong>
+          </p>
+
+          <p>
+            Apply middleware to specific routes using the <code>use</code> method or directly in the route definition:
+          </p>
+
+          <Code language='javascript' code={`// Apply middleware to all routes\napp.use(logRequest);\n\n// Apply middleware to a specific route\napp.get('/special-route', customLogger('Special Route Logging'), (req, res) => {\n  res.send('This is a special route!');\n});`} />
+
+
+          <p>
+            <strong>Order of Middleware Execution</strong>
+          </p>
+
+          <p>
+            Middleware functions are executed in the order they are defined. Ensure the sequence matches your intended flow of tasks.
+          </p>
+
+          <p>
+            <strong>Conclusion</strong>
+          </p>
+
+          <p>
+            Creating custom middleware in Express.js provides a powerful way to modularize your application and handle various aspects of the request-response cycle. Whether logging, authentication, or custom processing, middleware allows you to inject additional functionality into your routes with ease.
+          </p>
 
           </div>
         </div>

@@ -50,7 +50,7 @@ function Npm() {
         <p>
         To hash a password, use the following code. The salt rounds determine the complexity of the hashing algorithm.
         </p>
-        <Code language='javascript' code={`const plaintextPassword = 'userPassword123';\nconst saltRounds = 10;\n\nconst hashedpassword = await bcrypt.hash(plaintextPassword, saltRounds)\n// do not forget to use async/await, because it returns a promise`} />
+        <Code language='javascript' code={`const plaintextPassword = 'userPassword123';\nconst salt = await bcrypt.genSalt(10)\n\nconst hashedpassword = await bcrypt.hash(plaintextPassword, salt)\n// do not forget to use async/await, because it returns a promise`} />
 
 
         <p>
