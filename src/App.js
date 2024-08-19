@@ -13,7 +13,7 @@ import Npm from './components/Npm';
 function App() {
   return (
     
-    <BrowserRouter basename="/code-diary">
+    <BrowserRouter>
     <Navbar/>
     <Routes> 
     <Route path='/' element={<Home/>}  />
