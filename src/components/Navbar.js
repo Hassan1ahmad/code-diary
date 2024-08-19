@@ -49,7 +49,8 @@ const shownavclicked=()=>{
         <li> <Link onClick={shownavclicked} to='/reactjs' >React JS</Link> </li>
         <li> <Link onClick={shownavclicked} to='/expressjs' >Express JS</Link> </li>
         <li> <Link onClick={shownavclicked} to='/npm' >NPM Pakages</Link> </li>
-        
+        <li> <Link onClick={shownavclicked} to='/ui-components' >UI Components</Link> </li>
+         
       </ul>
       </div>
       {/* ====================right search box==================== */}

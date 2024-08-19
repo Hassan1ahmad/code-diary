@@ -9,6 +9,7 @@ import Cascadingss from './components/Cascadingss';
 import Footer from './components/Footer';
 import Express from './components/Express';
 import Npm from './components/Npm';
+import Uicomponents from './components/Uicomponents';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
     <Route path='/cascaddingss' element={ <Cascadingss/> } />
     <Route path='/expressjs' element={<Express/> } />
     <Route path='/npm' element={<Npm/> } />
+    <Route path='/ui-components' element={<Uicomponents/>} />
     </Routes>
     <Footer/>
     </BrowserRouter>
