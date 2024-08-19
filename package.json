@@ -1,6 +1,5 @@
 {
   "name": "cheatsheet",
-  "homepage": "http://Hassan1ahmad.github.io/code-diary",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
