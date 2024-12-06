@@ -3,12 +3,13 @@ import Code from './code'
 
 function Uicomponents() {
     return (
+        <>
         <div>
             <div className="wrapper">
                 <div className="container">
                     <div className="row">
                         <div className="col-4">
-                            <nav id="navbar-example3 " className="sidebar">
+                            <nav id="navbar-example3 " className="sidebar  ">
                                 <a className="nav-link" href="#item-1">Aceternity UI</a>
                                 <a className="nav-link" href="#item-2">Magic UI</a>
                                 <a className="nav-link" href="#item-3">Framer Motion</a>
@@ -17,7 +18,7 @@ function Uicomponents() {
                             </nav>
                         </div>
                         <div className="col-8 content">
-                            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabIndex="0">
+                            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2"     tabIndex="0">
                                 <div id="item-1">
                                     <h4>Aceternity UI</h4>
                                     <p>
@@ -129,7 +130,7 @@ function Uicomponents() {
                                 <div id="item-5">
                                     <h4>shadcn/ui</h4>
                                     <p>
-                                        <strong><a target='blank' href="https://shadcn.dev/" className="text-reset" rel="noopener noreferrer">shadcn/ui</a></strong> is a modern component library that combines the power of Tailwind CSS with pre-built UI components, offering a flexible and efficient way to build beautiful web applications. Here are <b>three key advantages</b> of using shadcn/ui in your projects:
+                                        <strong><a target='blank' href="https://ui.shadcn.com/" className="text-reset" rel="noopener noreferrer">shadcn/ui</a></strong> is a modern component library that combines the power of Tailwind CSS with pre-built UI components, offering a flexible and efficient way to build beautiful web applications. Here are <b>three key advantages</b> of using shadcn/ui in your projects:
                                     </p>
                                     <img src={require('../assests/shadcnui.png')} className="img-fluid" alt="shadcn/ui"></img><br/><br/>
 
@@ -149,7 +150,7 @@ function Uicomponents() {
 
                                     <p>
                                         shadcn/ui is a versatile and powerful tool that can streamline your development process while delivering high-quality, accessible UIs. To learn more and start using shadcn/ui in your projects, visit the official website:
-                                        <strong><a target='blank' href="https://shadcn.dev/" className="text-reset" rel="noopener noreferrer">shadcn/ui</a></strong>.
+                                        <strong><a target='blank' href="https://ui.shadcn.com/" className="text-reset" rel="noopener noreferrer">shadcn/ui</a></strong>.
                                     </p>
                                 </div>
 
@@ -161,6 +162,9 @@ function Uicomponents() {
                 </div>
             </div>
         </div>
+        
+        
+        </>
     )
 }
 
